@@ -18,7 +18,7 @@
 */
 #include "bsp_can.h"
 
-Motor bsp_can_motor_data[6]; //电机数据解析结构体数组
+Motor bsp_can_motor_data[7]; //电机数据解析结构体数组
 
 
 /**
@@ -114,7 +114,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef* hcan)
 		#endif
 		//app_motor_Data_update(CAN_RxData,CAN_RxData); //此处替换自己的解析函数来使用，注意这里的CAN_RxData是局部变量，有需要的可以自行声明到外面去作为全局
 		switch (bsp_can_Rx.StdId) 
-			{				//！！！！注意不同电机要用不同ID
+		{				//！！！！注意不同电机要用不同ID
 		case(0x201):
 			  bsp_can_motor_data[0].Encoder = (int16_t) (CAN_RxData[0]<<8) | CAN_RxData[1];   //获取并转换电机实时位置（编码器）
 				bsp_can_motor_data[0].V = (int16_t) (CAN_RxData[2]<<8) | CAN_RxData[3]; /*获取并转换电机实时转速*/		
@@ -160,6 +160,13 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef* hcan)
 				bsp_can_motor_data[5].V = (int16_t) (CAN_RxData[2]<<8) | CAN_RxData[3]; 
 			  bsp_can_motor_data[5].Itrue = (int16_t) (CAN_RxData[4]<<8) | CAN_RxData[5];   
 			  bsp_can_motor_data[5].Temper = (int16_t) (CAN_RxData[6]<<8) | CAN_RxData[7];   
+				break;
+		case(0x207):
+			  bsp_can_motor_data[6].id = 7;  //电机ID为6
+			  bsp_can_motor_data[6].Encoder = (int16_t) (CAN_RxData[0]<<8) | CAN_RxData[1];   
+				bsp_can_motor_data[6].V = (int16_t) (CAN_RxData[2]<<8) | CAN_RxData[3]; 
+			  bsp_can_motor_data[6].Itrue = (int16_t) (CAN_RxData[4]<<8) | CAN_RxData[5];   
+			  bsp_can_motor_data[6].Temper = (int16_t) (CAN_RxData[6]<<8) | CAN_RxData[7];   
 				break;
 		    
 		default:

@@ -8,7 +8,7 @@
 //#define BSP_CAN_USE_SIGNAL
 //外设相关宏定义,移植时如果修改了外设请在这里修改
 #define BSP_CAN_USE_CAN1					hcan1
-//#define BSP_CAN_USE_CAN2					hcan2
+#define BSP_CAN_USE_CAN2					hcan2
 
 typedef struct 
 {
@@ -19,7 +19,7 @@ typedef struct
 	int16_t id;
 }Motor;
 
-extern Motor bsp_can_motor_data[6]; //电机数据解析结构体数组
+extern Motor bsp_can_motor_data[7]; //电机数据解析结构体数组
 
 
 void bsp_can_Init(void);	//CAN总线初始化函数

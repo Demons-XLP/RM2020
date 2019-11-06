@@ -91,7 +91,7 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
+  
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -101,16 +101,17 @@ int main(void)
   MX_SPI1_Init();
   MX_USART3_UART_Init();
   MX_USART6_UART_Init();
+  MX_CAN2_Init();
+	
   /* USER CODE BEGIN 2 */
-
-
+	bsp_can_Init();
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
-  MX_FREERTOS_Init(); 
+//  MX_FREERTOS_Init(); 
 
   /* Start scheduler */
-  osKernelStart();
+//  osKernelStart();
   
   /* We should never get here as control is now taken by the scheduler */
 
@@ -120,7 +121,6 @@ int main(void)
   {
 
 
-		//IMUSO3Thread();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -34,3 +34,17 @@ engineer\task_monitor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 engineer\task_monitor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 engineer\task_monitor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 engineer\task_monitor.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+engineer\task_monitor.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+engineer\task_monitor.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+engineer\task_monitor.o: ../Inc/FreeRTOSConfig.h
+engineer\task_monitor.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+engineer\task_monitor.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+engineer\task_monitor.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+engineer\task_monitor.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+engineer\task_monitor.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+engineer\task_monitor.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+engineer\task_monitor.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+engineer\task_monitor.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+engineer\task_monitor.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+engineer\task_monitor.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
+engineer\task_monitor.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h

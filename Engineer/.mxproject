@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=E:/My_STM32code/Engineer/Inc
+HeaderPath=E:/RM2020/Engineer/Inc
 HeaderFiles=gpio.h;can.h;dma.h;FreeRTOSConfig.h;spi.h;usart.h;stm32f4xx_it.h;stm32f4xx_hal_conf.h;main.h;
-SourcePath=E:/My_STM32code/Engineer/Src
+SourcePath=E:/RM2020/Engineer/Src
 SourceFiles=gpio.c;can.c;dma.c;freertos.c;spi.c;usart.c;stm32f4xx_it.c;stm32f4xx_hal_msp.c;stm32f4xx_hal_timebase_tim.c;main.c;
 
 [PreviousLibFiles]

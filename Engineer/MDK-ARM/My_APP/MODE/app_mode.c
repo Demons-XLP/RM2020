@@ -20,7 +20,8 @@
 #include "my_app.h"
 
 int16_t send_Claws[4];  //通过CAN向副控发送的数组
-int16_t send_buf[4];  //通过CAN向底盘电机发送的数组
+int16_t send_motor[4];  //通过CAN向主控轮子发送数组
+
 /*
 * @brief  遥控器模式函数
 * @details  放在DBUS中断中使用
@@ -31,15 +32,18 @@ int16_t send_buf[4];  //通过CAN向底盘电机发送的数组
 */
 void Mode_Choose(int s1,int s2)
 {
-	memset(send_Claws,0,4*sizeof(int16_t));
+	int16_t send_buf[4];  //
+//memset(send_Claws,0,4*sizeof(int16_t));
   if (s1 ==2 && s2 == 2)   //安全模式
 	{
-		memset(send_buf,0,4*sizeof(int16_t));
-		bsp_can_Sendmessage(&hcan1,0x200,send_buf);
+		memset(send_motor,0,4*sizeof(int16_t));
+		bsp_can_Sendmessage(&hcan1,0x200,send_motor);
 		
 	}
-	else if(s1 ==3 && s2 == 2)
+	else if(s1 ==3 && s2 == 2)  //底盘跟随
  {
+//			PID_Control(&motor_follow_E,motor_data[4].Encoder,Last_Encoder);  //PID底盘位置环跟随控制
+//			PID_Control(&motor_follow_V,motor_follow_E.OUT,motor_data[4].V);  //PID底盘速度环跟随控制
 			send_buf[0] =  RC_Ctl.rc.ch3*20 + RC_Ctl.rc.ch2*20 + RC_Ctl.rc.ch0*10;
 			send_buf[1] = -RC_Ctl.rc.ch3*20 + RC_Ctl.rc.ch2*20 + RC_Ctl.rc.ch0*10;
 			send_buf[2] =  RC_Ctl.rc.ch3*20 - RC_Ctl.rc.ch2*20 + RC_Ctl.rc.ch0*10;
@@ -60,13 +64,12 @@ void Mode_Choose(int s1,int s2)
 	 for (i=0;i<4;i++)
 	 {
 			PID_Control(&motor_V[i],send_buf[i],bsp_can_motor_data[i].V);
-			send_buf[i] = motor_V[i].OUT;
-		 	bsp_can_Sendmessage(&hcan1,0x200,send_buf);
+			send_motor[i] = motor_V[i].OUT;
+		 	bsp_can_Sendmessage(&hcan1,0x200,send_motor);
 	 }
 	 
  }
-// can_send_msg1(&hcan1,0x20B,Claws_send);
-   bsp_can_Sendmessage(&hcan1,0x20B,send_Claws);
+//   bsp_can_Sendmessage(&hcan1,0x20B,send_Claws);
 	
 }
 

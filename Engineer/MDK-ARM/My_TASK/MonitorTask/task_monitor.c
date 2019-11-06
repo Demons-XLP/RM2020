@@ -1,5 +1,5 @@
 #include "task_monitor.h"
-
+#include "cmsis_os.h"
 /** 
 * @brief  DBUS监视
 * @details  进入DBUS中段时，RC_Ctl.IsDbusOnline会被赋值为1，进入监视函数则会被赋值为0，若隔30ms还一直为0，则判定为离线，进入安全模式
@@ -9,7 +9,14 @@
 
 void Task_Monitor(void const *argument)
 {
-  DBUS_Monitor();
+	TickType_t xLastWakeTime;
+	xLastWakeTime = xTaskGetTickCount();  //获取当前的系统时间
+	for(;;)
+	{
+		
+		DBUS_Monitor();
+		vTaskDelayUntil(&xLastWakeTime,100/portTICK_PERIOD_MS);
+	}
 }
 
 void DBUS_Monitor(void)
