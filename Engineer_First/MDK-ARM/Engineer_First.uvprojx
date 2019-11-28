@@ -338,7 +338,7 @@
               <MiscControls>--cpp11</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F405xx,USE_HAL_DRIVER,STM32F405xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;    ../Drivers/STM32F4xx_HAL_Driver/Inc;    ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;    ../Middlewares/Third_Party/FreeRTOS/Source/include;    ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;    ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;    ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;    ../Drivers/CMSIS/Include;    .\My_BSP;    .\Car_Driver;    .\MPU9250;    .\ADC_deal;    .\My_Task;    .\My_APP</IncludePath>
+              <IncludePath>../Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;.\My_BSP;.\Car_Driver;.\MPU9250;.\My_Task;.\My_APP</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -411,6 +411,11 @@
               <FileName>bsp_mpu9250.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\My_BSP\bsp_mpu9250.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_adc_deal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\My_BSP\bsp_adc_deal.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -730,16 +735,6 @@
               <FileName>port.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>ADC_Deal</GroupName>
-          <Files>
-            <File>
-              <FileName>ADC_deal.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\ADC_deal\ADC_deal.c</FilePath>
             </File>
           </Files>
         </Group>

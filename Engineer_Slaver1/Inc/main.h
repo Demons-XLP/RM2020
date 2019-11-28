@@ -10,10 +10,10 @@
   * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics.
   * All rights reserved.</center></h2>
   *
-  * This software component is licensed by ST under Ultimate Liberty license
-  * SLA0044, the "License"; You may not use this file except in compliance with
-  * the License. You may obtain a copy of the License at:
-  *                             www.st.com/SLA0044
+  * This software component is licensed by ST under BSD 3-Clause license,
+  * the "License"; You may not use this file except in compliance with the
+  * License. You may obtain a copy of the License at:
+  *                        opensource.org/licenses/BSD-3-Clause
   *
   ******************************************************************************
   */
@@ -64,22 +64,18 @@ void Error_Handler(void);
 #define Omron2_GPIO_Port GPIOC
 #define Omron1_Pin GPIO_PIN_15
 #define Omron1_GPIO_Port GPIOC
-#define VCC_Pin GPIO_PIN_2
-#define VCC_GPIO_Port GPIOC
-#define GND_Pin GPIO_PIN_3
-#define GND_GPIO_Port GPIOC
-#define BLUE_Pin GPIO_PIN_0
-#define BLUE_GPIO_Port GPIOA
+#define BLIE_Pin GPIO_PIN_0
+#define BLIE_GPIO_Port GPIOA
 #define RED_Pin GPIO_PIN_1
 #define RED_GPIO_Port GPIOA
 #define GREEN_Pin GPIO_PIN_2
 #define GREEN_GPIO_Port GPIOA
-#define NULL_Pin GPIO_PIN_4
-#define NULL_GPIO_Port GPIOC
-#define NULLC5_Pin GPIO_PIN_5
-#define NULLC5_GPIO_Port GPIOC
-#define Air_Cylinder6_Pin GPIO_PIN_2
-#define Air_Cylinder6_GPIO_Port GPIOD
+#define BELL_Pin GPIO_PIN_3
+#define BELL_GPIO_Port GPIOA
+#define OLED_DC_Pin GPIO_PIN_4
+#define OLED_DC_GPIO_Port GPIOC
+#define OLED_RES_Pin GPIO_PIN_5
+#define OLED_RES_GPIO_Port GPIOC
 #define Air_Cylinder5_Pin GPIO_PIN_3
 #define Air_Cylinder5_GPIO_Port GPIOB
 #define Air_Cylinder4_Pin GPIO_PIN_4

@@ -56,4 +56,3 @@ engineer_first\main.o: ../Inc/spi.h
 engineer_first\main.o: ../Inc/tim.h
 engineer_first\main.o: ../Inc/usart.h
 engineer_first\main.o: ../Inc/gpio.h
-engineer_first\main.o: .\ADC_deal\adc_deal.h

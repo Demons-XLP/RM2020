@@ -16,7 +16,7 @@ engineer_first\task_main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/t
 engineer_first\task_main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 engineer_first\task_main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 engineer_first\task_main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
-engineer_first\task_main.o: .\ADC_deal\adc_deal.h
+engineer_first\task_main.o: .\My_BSP\bsp_adc_deal.h
 engineer_first\task_main.o: ../Inc/adc.h
 engineer_first\task_main.o: ../Inc/main.h
 engineer_first\task_main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
