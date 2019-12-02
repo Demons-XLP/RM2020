@@ -37,5 +37,5 @@ engineer_new1\bsp_can.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_e
 engineer_new1\bsp_can.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 engineer_new1\bsp_can.o: ../Inc/can.h
 engineer_new1\bsp_can.o: ../Inc/main.h
-engineer_new1\bsp_can.o: .\Car_Driver\Car_Driver.hpp
-engineer_new1\bsp_can.o: .\Car_Driver\CarDrv_config.hpp
+engineer_new1\bsp_can.o: My_BSP\bsp_motor.hpp
+engineer_new1\bsp_can.o: My_BSP\bsp_car_config.hpp

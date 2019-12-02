@@ -1,7 +1,7 @@
 /** 
 * @file	   CarDrv_config.hpp
 * @brief    用户自定义参数头文件
-* @details  该头文件下的参数与bsp_motor电机驱动库有关，用户可以自行配置，建议在此配置库选项，以保证库文件不改动 \n
+* @details  该头文件下的参数与Car_Driver电机驱动库有关，用户可以自行配置，建议在此配置库选项，以保证库文件不改动 \n
 *           当没有出现新的参数的时候，不要提交本文件避免专用参数提交到通用参数里
 * @author   WMD
 * @date     2019年1月17日19:58:05
@@ -9,10 +9,11 @@
 * @par Copyright (c):  
 *       WMD 
 * @par 日志
-*       V0.1 WMD觉得需要有这一个文件，所以这个文件就被创建了
+*       V0.1	WMD觉得需要有这一个文件，所以这个文件就被创建了
+*				V0.2	Evan-GH修改了这个文件的文件名来适应代码规范
 */  
-#ifndef CARDRV_CONFIG_HPP
-#define CARDRV_CONFIG_HPP
+#ifndef __BSP_CAR_CONFIG_HPP
+#define __BSP_CAR_CONFIG_HPP
 
 ///选定使用的STM32的头文件
 #include "stm32f4xx_hal.h"
@@ -33,10 +34,6 @@ typedef enum{
     ///在子类需要拓展运行模式时需要在这里加
 }RunState_t;
 
-//决定使用多少个CAN
-#define USE_CAN1
-#define USE_CAN2
-
 //定义底盘功率限制
-#define LIMIT_P (80)
+#define LIMIT_P (40)
 #endif 

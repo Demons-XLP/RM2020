@@ -21,7 +21,7 @@
 *				2019.11.15|		2.0		|		去除了信号量使用的条件编译，现在只需要选择使用哪一个CAN总线了，添加了一个freertos的条件编译使用选项
 */
 #include "bsp_can.hpp"
-#include "Car_Driver.hpp"
+#include "bsp_motor.hpp"
 /**
 * @brief  CAN总线配置初始化
 * @details  初始化滤波器，根据宏定义的开启来初始化CAN总线

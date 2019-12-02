@@ -39,8 +39,8 @@ engineer_new1\app_mode.o: .\My_BSP\bsp_dbus.h
 engineer_new1\app_mode.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 engineer_new1\app_mode.o: ../Inc/usart.h
 engineer_new1\app_mode.o: ../Inc/main.h
-engineer_new1\app_mode.o: .\Car_Driver\Car_Driver.hpp
-engineer_new1\app_mode.o: .\Car_Driver\CarDrv_config.hpp
+engineer_new1\app_mode.o: .\My_BSP\bsp_motor.hpp
+engineer_new1\app_mode.o: .\My_BSP\bsp_car_config.hpp
 engineer_new1\app_mode.o: .\My_BSP\bsp_can.hpp
 engineer_new1\app_mode.o: ../Inc/can.h
 engineer_new1\app_mode.o: My_APP\app_chassis.h

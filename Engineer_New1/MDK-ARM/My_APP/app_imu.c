@@ -186,6 +186,7 @@ static void MPU_Read_Raw(void)
 
 #ifdef USE_LPF
 		app_imu_Data.LPF.Accel[i] = app_math_LPF2pApply(&Acc_LPF[i],(float)app_imu_Data.original.Accel[i]);
+
     app_imu_Data.LPF.Gyro[i] = app_math_LPF2pApply(&Gyro_LPF[i],(float)app_imu_Data.original.Gyro[i]);
 		/* 取角速度 */
     app_imu_Data.Angle_Rate[i] = (float)(app_imu_Data.LPF.Gyro[i] - app_imu_Data.offset.Gyro[i] + manualOffsetGyro[i])*Offset_Coeff[i];  //16位量程，只对原始数据进行补偿和滤波处理,需要根据9250改		

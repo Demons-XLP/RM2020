@@ -338,7 +338,7 @@
               <MiscControls>--cpp11</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F405xx,USE_HAL_DRIVER,STM32F405xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc; ../Drivers/STM32F4xx_HAL_Driver/Inc; ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy; ../Middlewares/Third_Party/FreeRTOS/Source/include; ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS; ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F; ../Drivers/CMSIS/Device/ST/STM32F4xx/Include; ../Drivers/CMSIS/Include; .\Car_Driver; .\My_APP; .\My_BSP; .\My_Task</IncludePath>
+              <IncludePath>../Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;.\My_APP;.\My_BSP;.\My_Task</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -390,21 +390,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Car_Driver</GroupName>
-          <Files>
-            <File>
-              <FileName>Car_Driver.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Car_Driver\Car_Driver.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>universe.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Car_Driver\universe.cpp</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>My_BSP</GroupName>
           <Files>
             <File>
@@ -431,6 +416,16 @@
               <FileName>TFmini.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\My_BSP\TFmini.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_motor.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\My_BSP\bsp_motor.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_universe.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\My_BSP\bsp_universe.cpp</FilePath>
             </File>
           </Files>
         </Group>

@@ -56,8 +56,8 @@ engineer_new1\task_main.o: .\My_APP\app_mode.h
 engineer_new1\task_main.o: .\My_BSP\bsp_dbus.h
 engineer_new1\task_main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 engineer_new1\task_main.o: ../Inc/usart.h
-engineer_new1\task_main.o: .\Car_Driver\Car_Driver.hpp
-engineer_new1\task_main.o: .\Car_Driver\CarDrv_config.hpp
+engineer_new1\task_main.o: .\My_BSP\bsp_motor.hpp
+engineer_new1\task_main.o: .\My_BSP\bsp_car_config.hpp
 engineer_new1\task_main.o: .\My_APP\app_chassis.h
 engineer_new1\task_main.o: .\My_APP\app_imu.h
 engineer_new1\task_main.o: .\My_APP\app_math.h
